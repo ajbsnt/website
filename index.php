@@ -1,36 +1,14 @@
-<!-- <?php
-
-// echo"Hamro First Site";
-
-$x=1;
-$y=2;
-
-echo $x+$y."<br/>" ;
-// echo "<br/>";
-
-echo $x*$y."<br/>";
-// echo "<br/>";
-
-echo $x-$y."<br/>";
-// echo "<br/>";
-
-echo $x/$y."<br/>";
-// echo "<br/>";
-
-
-?> -->
-<h1>Namaste Dai</h1>
-
 <?php
+session_start();
 
-echo"Hello";
+if ($_SESSION["user"] != null) {
+    echo "WELCOME BACK!!!" . $_SESSION["user"];
+    echo "<a href='./logout.php'>LOGOUT</a>";
+} else {    ?>
 
-?>
-<h1>halla na gar</h1>
 
-<?php
-$x=1;
-$y=2;
+    <p>WELCOME!!! Please Login in <a href="./form.php">HERE</a> </p>
+    <br>
+    <p>Don't have an account? Sign Up<a href="./signup.php">HERE</a></p>
 
-echo $x+$y;
-?>
+<?php } ?>
