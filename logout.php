@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$_SESSION["user"]=null;
+$_SESSION["user"] = null;
 
 echo "Your are Logged out";
 ?>

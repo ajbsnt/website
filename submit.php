@@ -4,9 +4,10 @@ session_start();
  $email=$_POST["email"];
  $password=$_POST["password"];
 
- if($email=="admin@admin.com" && $password=="password"){
 
-$_SESSION["user"] = "admin@admin.com";
+if($email==$_SESSION["email"] && $password==$_SESSION["password"]){
+
+$_SESSION["user"] = $_SESSION["email"];
 echo "Logged in successfully.<a href='./index.php'> Click Here </a>";
 
  }
